@@ -68,6 +68,6 @@ void LoginDialog::on_pushButton_ingresar_clicked(){
 }
 
 bool LoginDialog::validarUsuario(const QString &usuario) {
-    static QRegularExpression re("^[a-zA-Z]+$");
-    return re.match(usuario).hasMatch();
+    static QRegularExpression regex("^[a-zA-Z]+$");
+    return regex.match(usuario).hasMatch();
 }
