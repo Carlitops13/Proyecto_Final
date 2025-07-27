@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>914</width>
-    <height>544</height>
+    <width>919</width>
+    <height>394</height>
    </rect>
   </property>
   <property name="font">
@@ -19,173 +19,164 @@
    <string>Gestón de Atletas</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget_atletas">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>290</y>
-      <width>641</width>
-      <height>231</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QWidget" name="formLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>130</y>
-      <width>881</width>
-      <height>141</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>🪪 ID: </string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLabel" name="label_id">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>🏃Nombre Completo del atleta: </string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEdit_nombre"/>
-     </item>
-     <item row="2" column="1">
-      <widget class="QSpinBox" name="spinBox_edad">
-       <property name="minimum">
-        <number>18</number>
-       </property>
-       <property name="maximum">
-        <number>65</number>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QComboBox" name="comboBox_deporte">
-       <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTableWidget" name="tableWidget_atletas"/>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>🪪 ID: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_id">
         <property name="text">
          <string/>
         </property>
-       </item>
-       <item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>Fútbol</string>
+         <string>🏃Nombre Completo del atleta: </string>
         </property>
-       </item>
-       <item>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_nombre"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>Calistenia</string>
+         <string>🔞 Edad: </string>
         </property>
-       </item>
-       <item>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QSpinBox" name="spinBox_edad">
+        <property name="minimum">
+         <number>18</number>
+        </property>
+        <property name="maximum">
+         <number>65</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>Tennis</string>
+         <string> 🏐 Deporte: </string>
         </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Ecuavolley</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Gimnasia</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Fútbol Sala</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Atletismo</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="pushButton_registrar">
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="comboBox_deporte">
+        <item>
          <property name="text">
-          <string>📝 Registrar</string>
+          <string/>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_actualizar">
+        </item>
+        <item>
          <property name="text">
-          <string>🔄 Actualizar</string>
+          <string>Fútbol</string>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_eliminar">
+        </item>
+        <item>
          <property name="text">
-          <string>🗑️ Eliminar</string>
+          <string>Calistenia</string>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_limpiar">
+        </item>
+        <item>
          <property name="text">
-          <string>🧹 Limpiar Campos</string>
+          <string>Tennis</string>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_borrarTodo">
+        </item>
+        <item>
          <property name="text">
-          <string>🆑 Limpiar Tabla</string>
+          <string>Ecuavolley</string>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_guardar">
+        </item>
+        <item>
          <property name="text">
-          <string>💾 Guardar</string>
+          <string>Gimnasia</string>
          </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>🔞 Edad: </string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string> 🏐 Deporte: </string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
+        </item>
+        <item>
+         <property name="text">
+          <string>Fútbol Sala</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Atletismo</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton_registrar">
+          <property name="text">
+           <string>📝 Registrar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_actualizar">
+          <property name="text">
+           <string>🔄 Actualizar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_eliminar">
+          <property name="text">
+           <string>🗑️ Eliminar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_limpiar">
+          <property name="text">
+           <string>🧹 Limpiar Campos</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_borrarTodo">
+          <property name="text">
+           <string>🆑 Limpiar Tabla</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_guardar">
+          <property name="text">
+           <string>💾 Guardar</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>914</width>
+     <width>919</width>
      <height>19</height>
     </rect>
    </property>

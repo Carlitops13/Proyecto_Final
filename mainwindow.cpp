@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("Gestión de Atletas");
+    ui->tableWidget_atletas->setEditTriggers(QAbstractItemView::NoEditTriggers);
     srand(time(nullptr));
     cargarAtletas();
 }
@@ -34,6 +35,12 @@ void MainWindow::on_pushButton_registrar_clicked()
         QMessageBox::warning(this, "Campo vacío", "El nombre no puede estar vacío");
         return;
 
+    }
+    if (!idSeleccionado.isEmpty()) {
+        QMessageBox::warning(this, "Operación Inválida",
+                             "Ya hay un atleta seleccionado para editar.\n"
+                             "Use el botón 'Actualizar' para guardar cambios, o 'Limpiar Campos' para empezar un nuevo registro.");
+        return;
     }
 
     static const QRegularExpression regex("^[a-zA-ZñÑáéíóúÁÉÍÓÚ\\s]+$");
@@ -147,7 +154,7 @@ void MainWindow::on_pushButton_actualizar_clicked()
         return;
     }
 
-    // 6. Refrescar la tabla y limpiar los campos
+
     cargarAtletas();
     limpiarCampos();
     QMessageBox::information(this, "Éxito", "Atleta actualizado correctamente.");

@@ -26,11 +26,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots: // Slots para los botones y la tabla
+private slots:
     void on_pushButton_registrar_clicked();
     void on_pushButton_eliminar_clicked();
     void on_pushButton_actualizar_clicked();
-    // Vuelve a añadir o verifica que esta línea exista
+
     void on_tableWidget_atletas_itemClicked(QTableWidgetItem *item);
     void on_pushButton_limpiar_clicked();
      void on_pushButton_borrarTodo_clicked();
@@ -45,4 +45,4 @@ private:
     QString formatearNombrePropio(const QString &texto);
     void limpiarCampos();
 };
-#endif // MAINWINDOW_H
+#endif
